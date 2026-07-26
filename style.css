@@ -1,93 +1,48 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #f4f1ea;
-  color: #333;
-  margin: 0;
-  padding: 20px;
+  margin: 0; padding: 20px;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 30px;
+header { text-align: center; margin-bottom: 20px; }
+h1 { color: #8b0000; }
+
+.priority-banner {
+  background: #fff3cd; padding: 5px; border-radius: 8px;
+  max-width: 500px; margin: 0 auto 20px; border: 1px solid #ffeeba;
 }
 
-h1 {
-  color: #8b0000;
-  margin-bottom: 5px;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.show-list {
-  list-style-type: none;
-  padding: 0;
-}
+.container { max-width: 650px; margin: 0 auto; }
+.show-list { list-style: none; padding: 0; }
 
 .show-item {
-  background: white;
-  margin-bottom: 10px;
-  padding: 12px 18px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: white; margin-bottom: 8px; padding: 12px;
+  border-radius: 8px; display: flex; align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time {
+  font-family: monospace; font-weight: bold; color: #555;
+  background: #eee; padding: 4px 8px; border-radius: 4px;
+  margin-right: 15px; min-width: 50px; text-align: center;
 }
 
 .badge {
-  background-color: #8b0000;
-  color: white;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 50%;
-  min-width: 20px;
-  text-align: center;
-  margin-right: 15px;
+  background: #8b0000; color: white; border-radius: 50%;
+  width: 28px; height: 28px; display: flex; align-items: center;
+  justify-content: center; font-weight: bold; margin-right: 15px;
+  font-size: 0.9em;
 }
 
-.title {
-  flex-grow: 1;
-  font-weight: 600;
-}
+.title { flex-grow: 1; font-weight: 600; }
 
-.tag {
-  font-size: 0.75rem;
-  background-color: #e0e0e0;
-  color: #555;
-  padding: 3px 8px;
-  border-radius: 12px;
-  margin-right: 15px;
-}
+.priority-tag { background: #d9534f; color: white; margin-right: 10px; font-size: 0.7em; }
+.tag-night { background: #1a237e; color: white; margin-right: 10px; font-size: 0.7em; }
+.tag { padding: 3px 8px; border-radius: 10px; text-transform: uppercase; }
 
-.tag-night {
-  background-color: #1a237e;
-  color: white;
-}
+/* Styles spéciaux */
+.show-item.priority { border-left: 6px solid #d9534f; }
+.show-item.resto { background-color: #e8f5e9; border-left: 6px solid #4caf50; }
+.show-item.night { border-left: 6px solid #1a237e; }
 
-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-.priority-banner {
-  background-color: #fff3cd;
-  border: 1px solid #ffeeba;
-  color: #856404;
-  padding: 10px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 10px auto;
-}
-
-.show-item.priority {
-  border-left: 5px solid #d9534f;
-  background-color: #fff9f9;
-}
-
-.priority-tag {
-  background-color: #d9534f;
-  color: white;
-  font-weight: bold;
-}
+input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; }

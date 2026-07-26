@@ -3,109 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programme Prioritaire - Puy du Fou</title>
+  <title>Mon Planning Puy du Fou</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Programme du Puy du Fou</h1>
+    <h1>Mon Planning de Visite</h1>
     <div class="priority-banner">
-      <p>⭐ <strong>Spectacles Prioritaires :</strong> 1, 2, 9, 13</p>
+      <p>⭐ <strong>Priorités :</strong> 1, 2, 9, 13</p>
     </div>
   </header>
 
   <main class="container">
     <ul class="show-list" id="showList">
-      <li class="show-item priority">
-        <span class="badge">1</span>
-        <span class="title">Le Signe du Triomphe</span>
-        <span class="tag priority-tag">Prioritaire</span>
-        <input type="checkbox" data-id="show-1">
-      </li>
-      <li class="show-item priority">
-        <span class="badge">2</span>
-        <span class="title">Les Vikings</span>
-        <span class="tag priority-tag">Prioritaire</span>
-        <input type="checkbox" data-id="show-2">
-      </li>
+      
       <li class="show-item">
-        <span class="badge">3</span>
-        <span class="title">Le Bal des Oiseaux Fantômes</span>
-        <input type="checkbox" data-id="show-3">
-      </li>
-      <li class="show-item">
-        <span class="badge">4</span>
-        <span class="title">Le Secret de la Lance</span>
-        <input type="checkbox" data-id="show-4">
-      </li>
-      <li class="show-item">
-        <span class="badge">5</span>
-        <span class="title">Mousquetaire de Richelieu</span>
-        <input type="checkbox" data-id="show-5">
-      </li>
-      <li class="show-item">
-        <span class="badge">6</span>
-        <span class="title">Le Dernier Panache</span>
-        <input type="checkbox" data-id="show-6">
-      </li>
-      <li class="show-item">
+        <span class="time">09h45</span>
         <span class="badge">7</span>
         <span class="title">Le Mime et l'Étoile</span>
         <input type="checkbox" data-id="show-7">
       </li>
-      <li class="show-item immersive">
-        <span class="badge">8</span>
-        <span class="title">La Renaissance du Château</span>
-        <span class="tag">Immersif</span>
-        <input type="checkbox" data-id="show-8">
+
+      <li class="show-item">
+        <span class="time">10h15</span>
+        <span class="badge">4</span>
+        <span class="title">Le Secret de la Lance</span>
+        <input type="checkbox" data-id="show-4">
       </li>
+
       <li class="show-item priority">
-        <span class="badge">9</span>
-        <span class="title">L'Épée du Roi Arthur</span>
-        <span class="tag priority-tag">Prioritaire</span>
-        <input type="checkbox" data-id="show-9">
+        <span class="time">11h30</span>
+        <span class="badge">2</span>
+        <span class="title">Les Vikings</span>
+        <span class="tag priority-tag">TOP</span>
+        <input type="checkbox" data-id="show-2">
       </li>
-      <li class="show-item immersive">
-        <span class="badge">10</span>
-        <span class="title">Le Premier Royaume</span>
-        <span class="tag">Immersif</span>
-        <input type="checkbox" data-id="show-10">
-      </li>
+
       <li class="show-item">
-        <span class="badge">11</span>
-        <span class="title">Les Automates Musiciens</span>
-        <input type="checkbox" data-id="show-11">
-      </li>
-      <li class="show-item">
+        <span class="time">12h15</span>
         <span class="badge">12</span>
         <span class="title">Le Grand Carillon</span>
         <input type="checkbox" data-id="show-12">
       </li>
+
       <li class="show-item priority">
+        <span class="time">13h00</span>
         <span class="badge">13</span>
         <span class="title">Les Grandes Eaux</span>
-        <span class="tag priority-tag">Prioritaire</span>
+        <span class="tag priority-tag">TOP</span>
         <input type="checkbox" data-id="show-13">
       </li>
-      <li class="show-item immersive">
-        <span class="badge">18</span>
-        <span class="title">Le Mystère de La Pérouse</span>
-        <span class="tag">Immersif</span>
-        <input type="checkbox" data-id="show-18">
+
+      <li class="show-item priority">
+        <span class="time">14h00</span>
+        <span class="badge">1</span>
+        <span class="title">Le Signe du Triomphe</span>
+        <span class="tag priority-tag">TOP</span>
+        <input type="checkbox" data-id="show-1">
       </li>
+
+      <li class="show-item priority">
+        <span class="time">15h30</span>
+        <span class="badge">9</span>
+        <span class="title">L'Épée du Roi Arthur</span>
+        <span class="tag priority-tag">TOP</span>
+        <input type="checkbox" data-id="show-9">
+      </li>
+
+      <li class="show-item">
+        <span class="time">16h00</span>
+        <span class="badge">5</span>
+        <span class="title">Mousquetaire de Richelieu</span>
+        <input type="checkbox" data-id="show-5">
+      </li>
+
       <li class="show-item immersive">
+        <span class="time">17h00</span>
+        <span class="badge">10</span>
+        <span class="title">Le Premier Royaume</span>
+        <input type="checkbox" data-id="show-10">
+      </li>
+
+      <li class="show-item">
+        <span class="time">17h30</span>
+        <span class="badge">6</span>
+        <span class="title">Le Dernier Panache</span>
+        <input type="checkbox" data-id="show-6">
+      </li>
+
+      <li class="show-item immersive">
+        <span class="time">18h15</span>
         <span class="badge">19</span>
         <span class="title">Les Amoureux de Verdun</span>
-        <span class="tag">Immersif</span>
         <input type="checkbox" data-id="show-19">
       </li>
+
+      <li class="show-item">
+        <span class="time">19h00</span>
+        <span class="badge">11</span>
+        <span class="title">Les Automates Musiciens</span>
+        <input type="checkbox" data-id="show-11">
+      </li>
+
+      <li class="show-item immersive">
+        <span class="time">20h00</span>
+        <span class="badge">18</span>
+        <span class="title">Le Mystère de La Pérouse</span>
+        <input type="checkbox" data-id="show-18">
+      </li>
+
+      <li class="show-item resto">
+        <span class="time">20h45</span>
+        <span class="badge">🍴</span>
+        <span class="title">PAUSE RESTAURANT</span>
+        <input type="checkbox" data-id="resto">
+      </li>
+
       <li class="show-item night">
+        <span class="time">22h00</span>
         <span class="badge">20</span>
         <span class="title">Les Noces de Feu</span>
         <span class="tag tag-night">Nocturne</span>
         <input type="checkbox" data-id="show-20">
       </li>
+
     </ul>
   </main>
 
