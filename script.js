@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const idDone = doneCheck.getAttribute("data-id");
       const idMissed = missedCheck.getAttribute("data-id");
 
-      // Charger l'état sauvegardé
+      // 1. Charger l'état sauvegardé dans le navigateur au chargement de la page
       doneCheck.checked = localStorage.getItem(idDone) === "true";
       missedCheck.checked = localStorage.getItem(idMissed) === "true";
 
-      // Quand on coche "Fait"
+      // 2. Quand on coche "Fait" (✓)
       doneCheck.addEventListener("change", () => {
         if (doneCheck.checked) {
           missedCheck.checked = false;
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem(idDone, doneCheck.checked);
       });
 
-      // Quand on coche "Pas fait"
+      // 3. Quand on coche "Pas fait" (✗)
       missedCheck.addEventListener("change", () => {
         if (missedCheck.checked) {
           doneCheck.checked = false;
