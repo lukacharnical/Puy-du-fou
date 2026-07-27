@@ -1,15 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const items = document.querySelectorAll('.show-item');
 
-  checkboxes.forEach((checkbox) => {
-    const id = checkbox.getAttribute("data-id");
-    
-    // Charger la mémoire
-    checkbox.checked = localStorage.getItem(id) === "true";
+  items.forEach((item) => {
+    const doneCheck = item.querySelector('.done input');
+    const missedCheck = item.querySelector('.missed input');
 
-    // Enregistrer le clic
-    checkbox.addEventListener("change", (e) => {
-      localStorage.setItem(id, e.target.checked);
-    });
+    if (doneCheck && missedCheck) {
+      const idDone = doneCheck.getAttribute("data-id");
+      const idMissed = missedCheck.getAttribute("data-id");
+
+      // Charger l'état sauvegardé
+      doneCheck.checked = localStorage.getItem(idDone) === "true";
+      missedCheck.checked = localStorage.getItem(idMissed) === "true";
+
+      // Quand on coche "Fait"
+      doneCheck.addEventListener("change", () => {
+        if (doneCheck.checked) {
+          missedCheck.checked = false;
+          localStorage.setItem(idMissed, "false");
+        }
+        localStorage.setItem(idDone, doneCheck.checked);
+      });
+
+      // Quand on coche "Pas fait"
+      missedCheck.addEventListener("change", () => {
+        if (missedCheck.checked) {
+          doneCheck.checked = false;
+          localStorage.setItem(idDone, "false");
+        }
+        localStorage.setItem(idMissed, missedCheck.checked);
+      });
+    }
   });
 });
